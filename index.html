@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>余咖咖的导航</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="#">
+            <img src="./img/touxiang.jpg" alt="我的头像" class="avatar">
+            </a>
+            <div id="search">
+                <form class="formButton"name="s" action="http://www.baidu.com/s">  
+                    <input class="text"type="text" id="q" name="wd" autocomplete="on" value="">
+                    <input type="button" class="button" onclick="window.open('http://www.baidu.com/s?wd='+s.wd.value,'')" value="百度一下">
+                    <input type="button" class="button" onclick="window.open('http://www.google.com/search?q='+s.wd.value,'')"  value="谷歌搜索">
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="bg">
+            <img src="./img/bg.jpg" alt="背景" class="bgimg">
+        <div class="wrapper" id="box"></div>
+        </div>
+    </main>
+    <footer>
+        <p>Stay Hungry, Stay Foolish</p>
+    </footer>
+    
+<script src="./main.js"></script>
+
+</body>
+</html>
