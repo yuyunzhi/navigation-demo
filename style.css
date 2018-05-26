@@ -79,7 +79,12 @@ main{
 }
 #box kbd:hover > button{
     display:block;
+    cursor: pointer;
 }
+#box kbd:hover{
+    cursor: pointer;
+}
+
 
 .header a{
     cursor: default;
