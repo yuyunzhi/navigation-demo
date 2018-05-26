@@ -97,7 +97,7 @@ main{
     position: relative;
     display: block;
     vertical-align: top;
-    left:340px;
+    left:21%;
     top:15px;
     cursor: pointer;
 
@@ -117,13 +117,14 @@ main{
     position: absolute;
     top:40px;
     left:100px;
+
 }
 
 form{
     float:right;
     display: block;
     position: absolute;
-    right:330px;
+    right:15%;
     top:30px;
 }
 
@@ -149,6 +150,7 @@ form .button{
     border-radius: 2px;
     cursor: pointer;
 }
+
 
 footer{
     text-align: center;

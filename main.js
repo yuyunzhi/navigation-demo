@@ -86,6 +86,7 @@ var hash={
     m:'www.mcdonalds.com.cn'
 }
 
+
 //取出localStorage 中的zzz 对应的hash
 var hashInLocalStorage = JSON.parse(localStorage.getItem('zzz')||'null');
 if(hashInLocalStorage){
@@ -101,7 +102,8 @@ while(index<keys['length']){
     for(var number=0;number<row.length;number++){               
         var kbd = createKbd(row[number]);
         var button = createButton(row[number]);   
-        var image = createImage(hash[row[number]]);      
+        var image = createImage(hash[row[number]]);  
+        kbd.classList.add(row[number])  
     }
 index=index+1;
 }
@@ -114,15 +116,28 @@ var input = document.querySelector("input");
 body.onclick = function (evt){
     if(evt.target.localName == "input"){
         document.onkeypress=''; 
-    }else{
-        console.log('2')
+    }else if(evt.target.localName == "kbd"){
+         var classNumber = evt.target.className[4];//key w ,w是在第5位
+         website=hash[classNumber];
+         if(website === undefined || website === null){
+            return
+         }else{
+            window.open('http://'+website,'_blank');
+         }
+    }
+    else{
+
         document.onkeypress=function(xxx){
             key=xxx['key'];  //将监听的键盘字母保存到变量key
             website=hash[key];  //获取hash数组的值（网站地址）保存变量website;
             //在当前窗口打开网站
             //location.href = "http://"+website
             //在新窗口打开网站
-            window.open('http://'+website,'_blank');
+            if(website === undefined || website === null){
+                return
+             }else{
+                window.open('http://'+website,'_blank');
+             }
             
         }
 
